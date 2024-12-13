@@ -30,4 +30,4 @@ La información presentada en este proyecto ha sido recopilada de las siguientes
 
 Puedes acceder a la página educativa en la siguiente URL:
 
-[https://github.com/DanielDJTR/Evolucion-JavaScript.github.io](https://github.com/DanielDJTR/Evolucion-JavaScript.github.io)
+[https://danieldjtr.github.io/Evolucion-JavaScript.github.io/](https://danieldjtr.github.io/Evolucion-JavaScript.github.io/)
