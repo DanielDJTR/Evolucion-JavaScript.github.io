@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos básicos y enlace a hojas de estilo -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Desarrollador JavaScript</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/formulario.css">
+</head>
+<body>
+    <!-- Navegación principal -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="./index.html">Introducción</a></li>
+            <li><a href="./usuarios.html">Para Usuarios</a></li>
+            <li><a href="./desarrolladores.html">Para Desarrolladores</a></li>
+            <li><a href="./participacion.html">Participación</a></li>
+            <li><a href="./formulario.html">Formulario</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de encabezado (hero) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Formulario</h1>
+            <h2 class="hero-subtitle">Da tu opinión de estos cambios</h2>
+            <!-- Logo representativo -->
+            <div class="logo-container">
+                <img class="logo" src="./img/logo-js.png" alt="Logo de JavaScript" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección principal del formulario -->
+    <section class="content-section">
+        <div class="content-block">
+            <h2>Registro de Desarrollador</h2>
+
+            <!-- Inicio del formulario con método POST y archivo de procesamiento -->
+            <form class="participation-form" action="procesar_registro.php" method="post">
+
+                <!-- Campo para nombre completo -->
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" required maxlength="100">
+                </div>
+
+                <!-- Campo para correo electrónico -->
+                <div class="form-group">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" required maxlength="100">
+                </div>
+
+                <!-- Campo opcional para teléfono -->
+                <div class="form-group">
+                    <label for="telefono">Teléfono de Contacto</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9,13}">
+                </div>
+
+                <!-- Campo obligatorio para fecha de nacimiento -->
+                <div class="form-group">
+                    <label for="fechaNacimiento">Fecha de Nacimiento *</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                </div>
+
+                <!-- Selección de años de experiencia -->
+                <div class="form-group">
+                    <label for="experiencia">Años de Experiencia en JavaScript *</label>
+                    <select id="experiencia" name="experiencia" required>
+                        <option value="">Selecciona</option>
+                        <option value="0-2">0-2 años</option>
+                        <option value="3-5">3-5 años</option>
+                        <option value="6-10">6-10 años</option>
+                        <option value="10+">Más de 10 años</option>
+                    </select>
+                </div>
+
+                <!-- Selección de especialidad principal -->
+                <div class="form-group">
+                    <label for="especialidad">Especialidad *</label>
+                    <select id="especialidad" name="especialidad" required>
+                        <option value="">Selecciona</option>
+                        <option value="frontend">Frontend</option>
+                        <option value="backend">Backend</option>
+                        <option value="fullstack">Full Stack</option>
+                        <option value="mobile">Desarrollo Móvil</option>
+                    </select>
+                </div>
+
+                <!-- Selección de frameworks preferidos -->
+                <div class="form-group">
+                    <label>Frameworks de Interés</label>
+                    <div>
+                        <input type="checkbox" id="react" name="frameworks[]" value="react">
+                        <label for="react">React</label>
+                        <input type="checkbox" id="vue" name="frameworks[]" value="vue">
+                        <label for="vue">Vue</label>
+                        <input type="checkbox" id="angular" name="frameworks[]" value="angular">
+                        <label for="angular">Angular</label>
+                    </div>
+                </div>
+
+                <!-- Campo para perfil de GitHub -->
+                <div class="form-group">
+                    <label for="github">Perfil de GitHub</label>
+                    <input type="url" id="github" name="github" maxlength="200">
+                </div>
+
+                <!-- Área de texto para contribuciones -->
+                <div class="form-group">
+                    <label for="contribucion">Área de Contribución *</label>
+                    <textarea id="contribucion" name="contribucion" required 
+                        placeholder="Describe en qué área de JavaScript te gustaría contribuir" 
+                        maxlength="500"></textarea>
+                </div>
+
+                <!-- Información legal -->
+                <div class="highlight-text">
+                    <p>Información Legal: Sus datos serán tratados según la normativa de Protección de Datos. 
+                    Puede ejercer sus derechos de acceso, rectificación, cancelación y oposición.</p>
+                </div>
+
+                <!-- Botón para enviar el formulario -->
+                <button type="submit" class="btn-submit">Registrarse en la Comunidad</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

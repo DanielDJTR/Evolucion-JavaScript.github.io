@@ -1,0 +1,129 @@
+/* Estilos específicos para el formulario de registro */
+.registro-container {
+    max-width: 700px;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.registro-titulo {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    position: relative;
+}
+
+.registro-titulo::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #f7df1e;
+}
+
+.formulario-registro {
+    display: grid;
+    gap: 1rem;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.grupo-formulario label {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.grupo-formulario input,
+.grupo-formulario select,
+.grupo-formulario textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario select:focus,
+.grupo-formulario textarea:focus {
+    outline: none;
+    border-color: #e67e22;
+    box-shadow: 0 0 0 2px rgba(230,126,34,0.2);
+}
+
+.grupo-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.grupo-checkbox input {
+    margin-right: 0.5rem;
+}
+
+.aviso-legal {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.btn-enviar {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-enviar:hover {
+    background-color: #d35400;
+}
+
+/* Estilos para validación */
+.grupo-formulario input:invalid,
+.grupo-formulario select:invalid,
+.grupo-formulario textarea:invalid {
+    border-color: #e74c3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .registro-container {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .registro-titulo {
+        font-size: 1.5rem;
+    }
+}
+
+/* Estilos para checkboxes de frameworks */
+.frameworks-grupo {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.frameworks-grupo label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
